@@ -16,7 +16,7 @@ spec:
         - name: add-static-route
           image: ibmcase/kubectl
           imagePullPolicy: Always
-          command: [ "/bin/bash", "-c" ]
+          command: [ "/bin/sh", "-c" ]
           args:
           - >
               _gateway=`ip route get 10.0.0.0/8 | sed 's/.*via \(.*\) dev.*/\1/'`;
